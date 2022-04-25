@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+    	<meta charset="utf-8">
+    	<title>Lab_7</title>
+    	<link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+    	<div class="content">
+			<div class="piccontainer">
+				<div class="artist-container">
+					<div class="avatar"></div>
+					<div class="name"> Artem Zagvozkin </div>
+						<div class="name-additional"> Saint-Petersburg <br> DevOps Engineer </div>
+					</div>
+			</div>
+			<div class="header">
+				<div class="menu-button" style="float: right;">
+					<a href="about.html" style="text-decoration: none; color: inherit;"> About </a> 
+				</div>
+				<div class="menu-button" >
+					<a href="index.html" style="text-decoration: none; color: inherit;"> Photos </a> 
+				</div>
+			</div>
+			<div id="pictures-container">
+				<script type='text/javascript'>
+					window.onload = function() {
+						for (i = 1; i <= 50; i++) 
+    					{
+							var pic = document.createElement('DIV');
+							pic.style.float = 'left';
+							pic.style.width = '20%';
+							pic.style.height = '0';
+							pic.style.paddingBottom = '20%';
+    					    pic.style.background = "url('source/" + i + ".jpg') 100% 100% no-repeat";
+							pic.style.backgroundSize = 'cover';
+							pic.style.backgroundPosition = 'center';
+
+    						var pic_container = document.getElementById("pictures-container");
+    					    pic_container.appendChild(pic);
+    					}
+					}
+				</script>
+			</div>
+			<div class="footer"></div>
+    	</div>
+    </body>
+</html>
